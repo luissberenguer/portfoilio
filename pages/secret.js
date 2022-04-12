@@ -6,24 +6,28 @@ export default function Secret() {
   if (session) {
     return (
       <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-        <p>Fijate esta es tu informacion:</p>
+        Contenido secretísimo <br />
+        Signed in as {session.user?.email || 'email desconocido'} <br />
+        <p>Fíjate en tu informacion:</p>
         <p>Nombre: {session.user?.name}</p>
-        <div>
-          <Image
-            className="rounded-full"
-            src={`${session.user?.image}`}
-            alt="user image"
-            height={300}
-            width={300}
-          />
-        </div>
+        {session.user?.image && (
+          <div className="py-4">
+            <Image
+              className="rounded-full"
+              src={`${session.user?.image}`}
+              alt="user image"
+              height={200}
+              width={200}
+            />
+          </div>
+        )}
+        <button onClick={() => signOut()}>Sign out</button>
       </>
     )
   }
   return (
     <>
+      Acceso denegado <br />
       Not signed in <br />
       <button onClick={() => signIn()}>Sign in</button>
     </>

@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth/next'
 import GithubProvider from 'next-auth/providers/github'
 import Credentials from 'next-auth/providers/credentials'
+import DiscordProvider from 'next-auth/providers/discord'
+import TwitterProvider from 'next-auth/providers/twitter'
 
 const options = {
   debug: true,
@@ -36,6 +38,14 @@ const options = {
     GithubProvider({
       clientId: process.env.AUTH_GITHUB_ID,
       clientSecret: process.env.AUTH_GITHUB_SECRET,
+    }),
+    DiscordProvider({
+      clientId: process.env.AUTH_DISCORD_ID,
+      clientSecret: process.env.AUTH_DISCORD_SECRET,
+    }),
+    TwitterProvider({
+      clientId: process.env.TWITTER_CLIENT_ID,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET,
     }),
   ],
 }

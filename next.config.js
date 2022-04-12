@@ -67,7 +67,7 @@ module.exports = withBundleAnalyzer({
     ]
   },
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    domains: ['avatars.githubusercontent.com', 'cdn.discordapp.com'],
   },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
