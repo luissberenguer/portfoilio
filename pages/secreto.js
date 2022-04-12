@@ -1,7 +1,18 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
 
-export default function Secret() {
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { getFileBySlug } from '@/lib/mdx'
+
+const DEFAULT_LAYOUT = 'AuthorLayout'
+
+export async function getStaticProps() {
+  const authorDetails = await getFileBySlug('authors', ['default'])
+  return { props: { authorDetails } }
+}
+
+export default function Secreto({ authorDetails }) {
+  const { mdxSource, frontMatter } = authorDetails
   const { data: session } = useSession()
   if (session) {
     return (
@@ -27,6 +38,11 @@ export default function Secret() {
   }
   return (
     <>
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+      />
       Acceso denegado <br />
       Not signed in <br />
       <button onClick={() => signIn()}>Sign in</button>
