@@ -8,8 +8,6 @@ import CoinbaseProvider from 'next-auth/providers/coinbase'
 
 const options = {
   debug: true,
-  session: {},
-  jwt: {},
   providers: [
     Credentials({
       name: 'Acertijo',
