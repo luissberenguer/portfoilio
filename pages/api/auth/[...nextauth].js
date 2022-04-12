@@ -7,7 +7,6 @@ import GoogleProvider from 'next-auth/providers/google'
 import CoinbaseProvider from 'next-auth/providers/coinbase'
 
 const options = {
-  debug: true,
   providers: [
     Credentials({
       name: 'Acertijo',
