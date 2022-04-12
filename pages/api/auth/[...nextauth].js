@@ -20,21 +20,23 @@ const options = {
         },
       },
       async authorize(credentials) {
-        // conectarnos a la API
-        const res = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/luis`, {
-          method: 'POST',
-          body: JSON.stringify(credentials),
-          headers: { 'Content-type': 'application/json' },
-        })
-        // retornar el usaurio o null
-        const user = await res.json()
-        console.log(user)
-        // transformar la respuesta a JSON
-        if (res.ok && user) {
-          return user
+        try {
+          // conectarnos a la API
+          const res = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/luis`, {
+            method: 'POST',
+            body: JSON.stringify(credentials),
+            headers: { 'Content-type': 'application/json' },
+          })
+          // retornar el usaurio o null
+          const user = await res.json()
+          console.log(user)
+          // transformar la respuesta a JSON
+          if (res.ok && user) {
+            return user
+          }
+        } catch (error) {
+          return null
         }
-
-        return null
       },
     }),
     GoogleProvider({
