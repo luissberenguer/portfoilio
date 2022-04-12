@@ -7,7 +7,6 @@ import GoogleProvider from 'next-auth/providers/google'
 import CoinbaseProvider from 'next-auth/providers/coinbase'
 
 const options = {
-  debug: true,
   providers: [
     Credentials({
       name: 'Acertijo',
@@ -65,18 +64,6 @@ const options = {
       clientSecret: process.env.COINBASE_CLIENT_SECRET,
     }),
   ],
-  pages: {
-    signIn: '/auth/signin',
-  },
-  callbacks: {
-    async session({ session, token, user }) {
-      session.user.username = session.user.name.split(' ').join('').toLocaleLowerCase()
-
-      session.user.uid = token.sub
-
-      return session
-    },
-  },
 }
 
 export default NextAuth(options)

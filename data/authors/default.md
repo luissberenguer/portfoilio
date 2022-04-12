@@ -1,16 +1,15 @@
 ---
-name: Tails Azimuth
+name: Luis Berenguer
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: Full Stack Developer
+company: CodeCademy
+email: luis01developer@gmail.com
+linkedin: https://www.linkedin.com/in/luisberenguer/
+github: https://github.com/luissberenguer
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Hola soy Luis, un desarrollador Full Stack con gran interés en la tecnología Blockchain, especialemnte en
+construir y desplegar contratos inteligentes en la red de Etereum.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Tengo experiencia en React, Tailwind.css, Javascript, TypeScript, Node.js, Express, NestJS, Solidity y Python
+Puedes ver todos mis proyectos en GitHub o leer varios de mis artículos en el blog.

@@ -1,19 +1,11 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Crypto Punks NFTs',
+    description: `He desplegado un contrato inteligente que pude generar hasta 10.000 tokens no fungibles en la
+    Blockchain de puebas de Ribkeby. La interfaz gráfica la he construido con React y la he conectado a la Blockchain
+    mediante la librería de web3.js para Javascript.`,
+    imgSrc: '/static/images/luis-punks.png',
+    href: 'https://bafybeic3tujmjrbayszkqpa32yi5mcouaygwqo5fkegbtgvqd5a22ziuda.ipfs.infura-ipfs.io/#/',
   },
 ]
 

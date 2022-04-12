@@ -25,18 +25,6 @@ class MyDocument extends Document {
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <Main />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKDH942MDM" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-    
-                gtag('config', 'G-TKDH942MDM');
-                `,
-            }}
-          />
           <NextScript />
         </body>
       </Html>

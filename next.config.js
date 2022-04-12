@@ -53,7 +53,7 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: false,
+  reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
@@ -65,9 +65,6 @@ module.exports = withBundleAnalyzer({
         headers: securityHeaders,
       },
     ]
-  },
-  env: {
-    NEXTAUTH_URL: 'http://localhost:3000',
   },
   images: {
     domains: [
