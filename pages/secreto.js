@@ -61,7 +61,8 @@ export default function Secreto() {
               Página Secreta
             </h1>
             <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              Para acceder a este contenido debes identificarte primero
+              Para acceder a este contenido debes identificarte primero (extrañamente no funciona en
+              producción)
             </p>
           </div>
           <div className="container py-12">
