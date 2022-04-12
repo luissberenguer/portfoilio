@@ -66,9 +66,6 @@ module.exports = withBundleAnalyzer({
       },
     ]
   },
-  env: {
-    NEXTAUTH_URL: 'http://localhost:3000',
-  },
   images: {
     domains: [
       'avatars.githubusercontent.com',
