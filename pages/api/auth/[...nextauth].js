@@ -12,7 +12,7 @@ const options = {
   jwt: {},
   providers: [
     Credentials({
-      name: 'Luis',
+      name: 'Acertijo',
       credentials: {
         password: {
           type: 'password',

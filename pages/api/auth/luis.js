@@ -1,10 +1,8 @@
-//@ts-check
-import { NextApiRequest, NextApiResponse } from 'next'
 const credentials = async (req, res) => {
-  //   if (req.method !== 'POST') {
-  //     res.status(405).end()
-  //     return
-  //   }
+  if (req.method !== 'POST') {
+    res.status(405).end()
+    return
+  }
 
   // POST - ok
   if (req.body.password === 'tres') {
